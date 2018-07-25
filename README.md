@@ -15,9 +15,9 @@ Duke Data Science Team
 
 Then navigate to the submission folder via the command line and execute the following:
 
-*python genPoems.py <topic> <seed>*
+python genPoems.py *topic seed*
 
-where topic is the user-supplied topic of the poem and seed (an optional argument) is an integer for the seed. Each topic should be one word. Additionally, we require the words in the topic to exist in the 6 billion token GloVe dictionary [2].
+where *topic* is the user-supplied topic of the poem and *seed* (an optional argument) is an integer for the seed. Each topic should be one word. Additionally, we require the words in the topic to exist in the 6 billion token GloVe dictionary [2].
 
 **Methodology.** A precise description of our approach follows. As a general rule, available words are constrained to those which are metrical (according to the stress encodings of [3]) and which are represented in the language model’s training text.
 
