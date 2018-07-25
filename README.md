@@ -5,7 +5,7 @@ Duke Data Science Team
 
 **Introduction.** Our team provides a program to generate Shakespearean sonnets within 20 minutes on a standard laptop CPU. We build off of the progress of the 2016 Poetix winners [1], taking steps to augment their approach. At a high level, we use an LSTM-based recurrent neural network to evaluate the likelihood of lines which are constrained to follow iambic pentameter, rhyme as necessary, and bear topical resemblance to a user input. We employ a beam search to select lines with high likelihood out of the rather sizable space of possible lines. 
 
-**Instructions.** Generated poems can be found in the *output_poems* folder. To generate a poem, first install the required dependencies (given python 3.6x):
+**Instructions.** First install the required dependencies (given python 3.6x):
 
 1) Tensorflow	
 2) gensim	
@@ -13,11 +13,17 @@ Duke Data Science Team
 4) argparse	
 5) nltk
 
-Then navigate to the submission folder via the command line and execute the following:
+Then download the 6 billion tokenn GloVe dictionary from [2] and unzip contents into *storyline_for_reference*
+
+To train a model from the works of Walt Whitman, execute:
+
+python train.py --data_dir data/whitman --save_dir whitman_model
+
+Finally, execute the following to generate a poem using the Whitman model:
 
 python genPoems.py *topic seed*
 
-where *topic* is the user-supplied topic of the poem and *seed* (an optional argument) is an integer for the seed. Each topic should be one word. Additionally, we require the words in the topic to exist in the 6 billion token GloVe dictionary [2].
+where *topic* is the user-supplied topic of the poem and *seed* (an optional argument) is an integer for the seed. We require the words in the topic to exist in the 6 billion token GloVe dictionary [2]. Generated poems can be found in the *output_poems* folder. 
 
 **Methodology.** A precise description of our approach follows. As a general rule, available words are constrained to those which are metrical (according to the stress encodings of [3]) and which are represented in the language model’s training text.
 
