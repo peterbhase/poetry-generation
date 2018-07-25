@@ -1,5 +1,5 @@
 ## Algorithmic Sonnet Generation
-Tianlin Duan, Liuyi Zhu, Peter Hase, John Benhart 
+Peter Hase, John Benhart, Tianlin Duan, Liuyi Zhu 
 
 Duke Data Science Team
 
