@@ -3,9 +3,12 @@
 Paper available at: https://arxiv.org/abs/1811.05067
 
 Peter Hase, John Benhart, Tianlin Duan, Liuyi Zhu, Cynthia Rudin
+
 Duke Data Science Team
 
-**Instructions for Producing Sonnets** First install the required dependencies (given python 3.6x):
+**Instructions for Producing Sonnets** 
+
+First install the required dependencies (given python 3.6x):
 
 1) Tensorflow	
 2) gensim	
